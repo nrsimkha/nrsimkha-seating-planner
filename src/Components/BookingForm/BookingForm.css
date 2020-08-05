@@ -1,0 +1,13 @@
+
+.booking-form{
+  width: 25%;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-form_title {
+  font-size: 24px;
+  margin: 30px 0;
+}

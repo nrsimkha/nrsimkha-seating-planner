@@ -1,0 +1,9 @@
+.seat {
+    
+    border-radius: 50%;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    cursor: pointer;
+    
+}

@@ -1,0 +1,28 @@
+
+.odd-row {
+  background-color: #F3F0F0;
+}
+
+.seatNumber, .personName {
+  padding: 0 15px;
+}
+
+/*.tableData {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid black;
+    }
+.tableData>* {
+    flex: 1 1 auto;
+}*/
+.row{
+  display: flex;
+  /*margin: 20px;*/
+  
+}
+.tableData {
+  column-count: 3;
+  width: 50%;
+}

@@ -1,0 +1,27 @@
+.table {
+  width: 160px;/*change*/
+  height: 160px;/*change*/
+  background-color: #2F59A9;
+  
+  margin: 40px; /*change*/
+  position: absolute;
+  border-radius: 50%;
+}
+.table-clone {
+  width: 240px;/*change*/
+  height: 240px;/*change*/
+  background-color: white;
+  margin: 50px;
+  margin-right: 90px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #DEDFEB;
+}
+.table_text{
+  position: absolute;
+  top: 43%;
+  left: 47%;
+  font-size: 26px;
+  color: #F4EADE;
+  font-family: 'Montserrat';
+}
