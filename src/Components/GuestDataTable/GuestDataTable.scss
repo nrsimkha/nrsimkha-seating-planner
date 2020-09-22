@@ -1,0 +1,155 @@
+
+.odd-row {
+  background-color: #F3F0F0;
+}
+
+.seatNumber, .personName {
+  padding: 0 15px;
+  max-width: 150px;
+}
+
+/*.tableData {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid black;
+    }
+.tableData>* {
+    flex: 1 1 auto;
+}*/
+.row{
+  display: flex;
+  /*margin: 20px;*/
+  /*border-right: 1px solid black;*/
+  padding: 5px;
+  background-color: #F3F0F0;
+  
+}
+.tableData {
+  /*column-count: 3;*/
+ /* width: 50%;*/
+  border: 1px solid black;
+  margin-left: 10px;
+  align-content: stretch;
+}
+.tableNumber{
+  margin: 10px;
+  font-size: 18px;
+}
+.tableBlock{
+  display: flex;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+
+$base-spacing-unit: 24px;
+$half-spacing-unit: $base-spacing-unit / 2;
+
+$color-alpha: #1772FF;
+$color-form-highlight: #EEEEEE;
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+
+.table-container {
+	max-width: 1000px;
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+}
+.table-content {
+  /*transition: all 0.5s ease-in;
+  visibility: hidden;
+  .is-table-open {
+    visibility: visible;
+  }*/
+}
+
+.table-block {
+	width:100%;
+	border:1px solid $color-form-highlight;
+}
+
+.table-header {
+	display:flex;
+	width:100%;
+	/*background:#000;*/
+	padding:($half-spacing-unit * 1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:($half-spacing-unit * 1.5) 0;
+	cursor: pointer;
+	&:nth-of-type(odd) {
+		background:$color-form-highlight;
+  }
+  
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+.main_table-row{
+	display:flex;
+	width:100%;
+  padding:($half-spacing-unit * 1.5) 0;
+  background: #859fc7;
+  position: relative;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding-left: 2rem;
+  .tableInfo {
+    padding-left: 1rem;
+  }
+  .arrow-down {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;    
+    transform: rotate(135deg);
+    /*position: absolute;
+    top: 30%;
+    left: 15%;*/
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-width: 0.2rem 0.2rem 0 0;
+      border-style: solid;
+      border-color: #fafafa;      
+      display: block;
+      
+    }
+  
+    
+    &:after {
+      content: '';
+      float: left;
+      position: relative;
+      top: -100%;
+      width: 100%;
+      height: 100%;
+      border-width: 0 .2rem 0 0;
+      border-style: solid;
+      border-color: #fafafa;
+      
+    }
+  }
+  .arrow-up{
+    @extend .arrow-down;
+    transform: rotate(-45deg);
+  }
+}
+.header__item {
+	text-transform:uppercase;
+}
+

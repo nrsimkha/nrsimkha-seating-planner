@@ -1,53 +1,54 @@
 import React from 'react';
 import "./Seat.css";
 
-class Seat extends React.Component {  
-        constructor(props){
-            super(props);
-            this.addSeat = this.addSeat.bind(this);
-            this.calculateCoordinates = this.calculateCoordinates.bind(this);
-            
-        }
+function Seat (props) {  
 
-        addSeat(){
-            if(!this.props.booked && !this.props.clicked){
-                this.props.onAdd(this.props.tableNumber, this.props.seatNumber);
-            }else if(this.props.clicked){
-                this.props.onRemove(this.props.tableNumber, this.props.seatNumber);
-            }
-            else{
-                console.log("Unavailabe seat");
-            }
-            
-        }
 
-    calculateCoordinates(i){
+    const addSeat = () => {
+        if(!props.booked && !props.clicked){
+            props.onAdd(props.tableNumber, props.seatNumber);
+        }else if(props.clicked){
+            props.onRemove(props.tableNumber, props.seatNumber);
+        }
+        else{
+            console.log("Unavailabe seat");
+        }
+        
+    }
+
+    const calculateCoordinates = (i) => {
 
        let styles = {
-            width: 56,
-            height: 56,
+            width: 0.46*props.tableRadius,
+            height: 0.46*props.tableRadius,
             left: "",
             top: "",
-            backgroundColor: this.props.booked === true ? 'grey': (this.props.clicked === true ? '#A3E0B4': '#4EA8DB')
+            backgroundColor: props.highlited === true 
+                ? `${props.colors.highlited}` 
+                : (props.booked === true 
+                    ? `${props.colors.unavailable}`
+                    : ((props.clicked === true) 
+                        ? `${props.colors.selected}` 
+                        : `${props.colors.empty}`))
             
         }
-        let seatsAngleRange = 360/this.props.seatsQuantity;
+        let seatsAngleRange = 360/props.seatsQuantity;
         
-        let left = (Math.sin(this.degrees_to_radians(seatsAngleRange)* i)  * this.props.tableRadius + this.props.tableRadius) - styles.width/2;
-        let top = (Math.cos(this.degrees_to_radians(seatsAngleRange)* i)  * (-1) * this.props.tableRadius + this.props.tableRadius) - styles.height/2;
+        let left = (Math.sin(degrees_to_radians(seatsAngleRange)* i)  * props.tableRadius + props.tableRadius) - styles.width/2;
+        let top = (Math.cos(degrees_to_radians(seatsAngleRange)* i)  * (-1) * props.tableRadius + props.tableRadius) - styles.height/2;
         styles.left = `${left}px`;
         styles.top = `${top}px`;
         return styles;
     }
-    degrees_to_radians(degrees){
+    const degrees_to_radians = (degrees) => {
         var pi = Math.PI;
         return degrees * (pi/180);
-        }
-    render(){                
+    }
+                  
+    return <div style={calculateCoordinates(props.seatNumber-1)} className="seat" data-seat={props.seatNumber} onClick={addSeat}>
+        <div className="seat_text">{props.seatNumber}</div>
+    </div>;
         
-
-       return <div style={this.calculateCoordinates(this.props.seatNumber-1)} className="seat" data-seat={this.props.seatNumber} onClick={this.addSeat}></div>;
-        }
         
     }
 

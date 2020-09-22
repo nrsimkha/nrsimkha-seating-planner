@@ -12,7 +12,9 @@
 
 .table-clone {
   width: 240px;
+  
   height: 240px;
+ 
   background-color: white;
   margin: 50px;
   margin-right: 90px;
@@ -29,22 +31,23 @@
   color: #F4EADE;
   font-family: 'Montserrat';
 }
-
 @media only screen and (max-width: 600px) {
-  .table-clone {
-    width: 180px;
+  .table-clone{
+    width: 180px;  
     height: 180px;
     margin: 30px;
     margin-right: 70px;
   }
-  .table {
-    width: 120px;
+  .table{
+    width: 120px;  
     height: 120px;
     margin: 30px;
   }
   .table_text {
+   
     top: 38%;
     left: 45%;
+    
   }
-}
+  }
 /*# sourceMappingURL=Table.css.map */

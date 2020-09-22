@@ -1,0 +1,72 @@
+
+.dropdown{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.control input{
+    width: 95%;    
+    background: #DEDFEB;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    
+}
+.selected-value{
+    display: flex;
+    margin: 1rem auto 0 auto;
+    background: #DEDFEB;
+    border-radius: 0.3rem;
+    
+}
+.clear-filter-btn{
+    width: 5%;    
+    background: #DEDFEB;
+    border-radius: 0.3rem;
+    padding: 0.5rem;    
+    color: grey;
+    text-align: center;
+    cursor: pointer;
+}
+.options{    
+    width: 100%;
+    display: none;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: darken(#DEDFEB, 5);
+    position: absolute;
+    border: 1px solid darken(#DEDFEB, 10);
+    max-height:150px;
+    overflow-y:scroll;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+     
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba(0,0,0,0.1);
+    }
+     
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(0,0,0,0.2);
+    }
+   
+    
+    
+}
+.option{    
+    border-top: 1px solid darken(#DEDFEB, 10);
+    margin: 0;
+    padding: 1rem 0 1rem 0.5rem;
+    cursor: pointer;
+    
+    
+}
+.open{
+    display: block;
+}
+

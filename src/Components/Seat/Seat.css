@@ -7,3 +7,10 @@
     cursor: pointer;
     
 }
+.seat_text{
+    margin: auto;
+    position: absolute;
+    top: 1rem; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    color: #F4EADE;
+}

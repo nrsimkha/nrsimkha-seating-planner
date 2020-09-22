@@ -2,35 +2,44 @@ import React from 'react';
 import "./Table.css";
 import Seat from '../Seat/Seat';
 
-class Table extends React.Component {
 
-    render(){
+function Table(props) {   
+    
         var seats = [];
-        for (var i = 0; i < this.props.seatsQuantity; i++) {   
+        for (var i = 0; i < props.seatsQuantity; i++) {   
+            
             let clicked = false;
             let booked = false;
-            if(this.props.checkedSeats.indexOf( i+1 ) !== -1 ){
+            let highlited = false;
+            if(props.checkedSeats && props.checkedSeats.indexOf( i+1 ) !== -1 ){
                 clicked = true;
-                console.log(this.props.checkedSeats);
-                console.log(i);
             }        
-            if(this.props.bookedSeats.indexOf( i+1 ) !== -1 ){
+            if(props.bookedSeats.indexOf( i+1 ) !== -1 ){
+                
                 booked = true;
             }  
-            seats.push(<Seat key={i} seatNumber={i+1} onRemove={this.props.onRemove} tableNumber={this.props.tableNumber} tableRadius={this.props.tableRadius} seatsQuantity={this.props.seatsQuantity } booked={booked} clicked={clicked} onAdd={this.props.onAdd} />);
+            if(i+1 === props.highlitedSeats){
+                
+                highlited = true;
+            }  
+            seats.push(<Seat key={i} seatNumber={i+1} onRemove={props.onRemove} tableNumber={props.tableNumber} tableRadius={props.tableRadius} seatsQuantity={props.seatsQuantity } highlited={highlited} booked={booked} clicked={clicked} colors={props.colors} onAdd={props.onAdd} />);
         }
+
+
+
         return (
             
-            <div className="table-clone" data-tableclone={this.props.tableNumber}>
+            <div className="table-clone" data-tableclone={props.tableNumber} >
                 
-                <div className="table" data-table={this.props.tableNumber}>  
-                    <div className="table_text">{this.props.tableNumber}</div>
+                <div className="table" data-table={props.tableNumber} onClick={()=>props.showModalHandler(props.tableNumber)}>  
+                    <div className="table_text">{props.tableNumber}</div>
                 </div>
+               
                 {seats}
 
             </div>
         )
-    }
+    
 }
 
 export default Table;

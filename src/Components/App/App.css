@@ -53,10 +53,18 @@
 }
 
 .App {
-  /*min-width: 960px;
-  max-width: 75%;*/
-  margin: 0 auto;
-  padding: 0;
+  margin-right: auto;
+  /* 1 */
+  margin-left: auto;
+  /* 1 */
+  max-width: 1200px;
+  /* 2 */
+  padding-right: 10px;
+  /* 3 */
+  padding-left: 10px;
+  /* 3 */
+  /*margin: 0 auto;
+  padding: 0;*/
 }
 
 .main-block {
@@ -68,6 +76,16 @@
 
 .container {
   /* margin: 0 auto;*/
+  /* display: flex;*/
+  /*justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;*/
+  /*border: 1px solid black;*/
+  position: relative;
+  background-color: #DEDFEB;
+}
+
+.container .container-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,10 +99,49 @@
       flex-wrap: wrap;
   /*border: 1px solid black;*/
   position: relative;
-  background-color: #DEDFEB;
+}
+
+.container .container-description {
+  border: 1px solid black;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.container .container-description .container-description-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.container .container-description .container-description-item .color {
+  background-color: #A3E0B4;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.container .container-description .container-description-item .is-occupied {
+  text-align: center;
 }
 
 .arrangment-ui {
   width: 75%;
+  min-width: 400px;
+}
+
+@media only screen and (max-width: 700px) {
+  .main-block {
+    /*width: 1200px;*/
+    display: block;
+  }
+  .container .container-description {
+    position: initial;
+  }
 }
 /*# sourceMappingURL=App.css.map */
