@@ -6,6 +6,7 @@ import Seat from '../Seat/Seat';
 function Table(props) {   
     
         var seats = [];
+        
         for (var i = 0; i < props.seatsQuantity; i++) {   
             
             let clicked = false;
@@ -22,7 +23,7 @@ function Table(props) {
                 
                 highlited = true;
             }  
-            seats.push(<Seat key={i} seatNumber={i+1} onRemove={props.onRemove} tableNumber={props.tableNumber} tableRadius={props.tableRadius} seatsQuantity={props.seatsQuantity } highlited={highlited} booked={booked} clicked={clicked} colors={props.colors} onAdd={props.onAdd} />);
+            seats.push(<Seat key={i} seatNumber={i+1} onRemove={props.onRemove} tableNumber={props.tableNumber} tableRadius={props.tableRadius} seatsQuantity={props.seatsQuantity } highlited={highlited} booked={booked} clicked={clicked} colors={props.colors} onAdd={props.onAdd} clickDisabled={props.clickDisabled}/>);
         }
 
 
@@ -31,7 +32,13 @@ function Table(props) {
             
             <div className="table-clone" data-tableclone={props.tableNumber} >
                 
-                <div className="table" data-table={props.tableNumber} onClick={()=>props.showModalHandler(props.tableNumber)}>  
+                <div className="table" data-table={props.tableNumber} onClick={()=>{
+                    if(props.showModalHandler){
+                        props.showModalHandler(props.tableNumber)
+                    }else{
+                        return;
+                    }
+                }}>  
                     <div className="table_text">{props.tableNumber}</div>
                 </div>
                

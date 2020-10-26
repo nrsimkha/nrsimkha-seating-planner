@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BookingForm extends React.Component {
+class ColorsInfo extends React.Component {
     render(){
 
         return (
@@ -25,4 +25,4 @@ class BookingForm extends React.Component {
     }
 }
 
-export default BookingForm;
+export default ColorsInfo;

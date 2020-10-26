@@ -50,7 +50,7 @@ export const Modal = ({show, closeModalHandler, table, bookedSeats, tableRadius}
                         <div className="header__item">Номер места </div> 
                         <div className="header__item">Имя </div>  
                         <div className="header__item">Должность </div> 
-                        <div className="header__item">Подразделение/Компания</div>   
+                        <div className="header__item">Отдел</div>   
                     </div> 
                     <div className="table-content">
                     {sortSeats(bookedSeatsForTable).map((seat, index) => {                                                 
@@ -64,7 +64,7 @@ export const Modal = ({show, closeModalHandler, table, bookedSeats, tableRadius}
                                 )
                             })
                     }
-                    <Table tableNumber={table} tableRadius={tableRadius} seatsQuantity={8} highlitedSeats={highlited} bookedSeats={arrayOfBookedSeats} colors={colors}/>
+                    <Table tableNumber={table} tableRadius={tableRadius} seatsQuantity={8} highlitedSeats={highlited} bookedSeats={arrayOfBookedSeats} colors={colors} clickDisabled={true}/>
                     </div>
                 </div>
                 <div className="modal-footer">

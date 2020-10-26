@@ -72,7 +72,8 @@
   align-items: center;
   flex-wrap: wrap;*/
   /*border: 1px solid black;*/
-  
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-color: #DEDFEB;
   .container-layout{
@@ -84,12 +85,13 @@
     position: relative;
   }
   .container-description{
-    border: 1px solid black;
+   
     padding: 10px;
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
+    display: flex;
+    flex-direction: column;    
+    width: 30%;    
     align-self: flex-end;
+
     .container-description-item{
       display: flex;
       padding: 10px;
@@ -115,9 +117,17 @@
   .main-block{
     /*width: 1200px;*/
     display: block;
+    overflow: hidden;
+    width: 95vw;
+
+  }
+  .arrangment-ui{    
+    min-width:95vw;
   }
   .container .container-description{
-    position: initial;
+    width: 40%;
+    align-self: start;
   }
   
+
   }

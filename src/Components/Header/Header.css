@@ -48,3 +48,24 @@ background-color: #F4EADE;
     font-family: 'Montserrat';
     
 }
+
+@media only screen and (max-width: 700px) {
+    .header_content{
+        margin: 0;
+      
+    }
+    .header_content_column{
+        text-align: center;
+    }
+    .header_user_img{
+        padding: 20px;
+    }
+    .header_user_text{
+        font-size: 14px;      
+        
+    }
+    .header_title{
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    }

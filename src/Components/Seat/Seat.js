@@ -5,14 +5,17 @@ function Seat (props) {
 
 
     const addSeat = () => {
-        if(!props.booked && !props.clicked){
-            props.onAdd(props.tableNumber, props.seatNumber);
-        }else if(props.clicked){
-            props.onRemove(props.tableNumber, props.seatNumber);
+        if(!props.clickDisabled){
+            if(!props.booked && !props.clicked){
+                props.onAdd(props.tableNumber, props.seatNumber);
+            }else if(props.clicked){
+                props.onRemove(props.tableNumber, props.seatNumber);
+            }
+            else{
+                console.log("Unavailabe seat");
+            }
         }
-        else{
-            console.log("Unavailabe seat");
-        }
+
         
     }
 
