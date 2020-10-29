@@ -22,6 +22,7 @@ const SearchFilter = ({guests, prompt, value, onChange}) => {
             setOpen(e && e.target === ref.current)
         }
         function filter(guests){
+            console.log(`Render SearchFilter`);
             console.log(guests)
             return guests.filter((guest) =>                
                 guest.name.toLowerCase().indexOf(query.toLowerCase()) > -1
