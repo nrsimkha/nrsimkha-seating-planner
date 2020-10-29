@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import "./SearchFilter.css";
 
 const SearchFilter = ({guests, prompt, value, onChange}) => {
-        console.log(`Render SearchFilter`);
+        
         const [open, setOpen] = useState(false);
         const [query, setQuery] = useState('');        
         const ref = useRef(null);
@@ -22,7 +22,7 @@ const SearchFilter = ({guests, prompt, value, onChange}) => {
             setOpen(e && e.target === ref.current)
         }
         function filter(guests){
-            console.log(`Render SearchFilter`);
+            console.log('Render SearchFilter');
             console.log(guests)
             return guests.filter((guest) =>                
                 guest.name.toLowerCase().indexOf(query.toLowerCase()) > -1
