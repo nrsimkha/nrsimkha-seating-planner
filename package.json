@@ -1,5 +1,5 @@
 {
-  "name": "-nrsimkha-seating-planner",
+  "name": "nrsimkha-seating-planner",
   "version": "1.0.0",
   "description": "The UI to create the table/seat layout and allow users to select their own seats.",
   "main": "server.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nrsimkha/-nrsimkha-seating-planner.git"
+    "url": "git+https://github.com/nrsimkha/nrsimkha-seating-planner.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nrsimkha/-nrsimkha-seating-planner/issues"
+    "url": "https://github.com/nrsimkha/nrsimkha-seating-planner/issues"
   },
-  "homepage": "https://github.com/nrsimkha/-nrsimkha-seating-planner#readme",
+  "homepage": "https://github.com/nrsimkha/nrsimkha-seating-planner#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

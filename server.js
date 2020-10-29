@@ -20,5 +20,6 @@ app.use('/api', apiRouter);
 app.listen(PORT, ()=> {
     console.log(`Server is listenenig on port ${PORT}`)
 })
+app.use(express.static('client/build'));
 
 module.exports = app;
