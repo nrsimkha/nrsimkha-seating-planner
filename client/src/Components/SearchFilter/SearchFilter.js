@@ -1,7 +1,8 @@
 import React, {useState, useRef, useEffect} from 'react';
 import "./SearchFilter.css";
 
-const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
+const SearchFilter = ({guests, prompt, value, onChange}) => {
+        console.log(`Render SearchFilter`);
         const [open, setOpen] = useState(false);
         const [query, setQuery] = useState('');        
         const ref = useRef(null);
