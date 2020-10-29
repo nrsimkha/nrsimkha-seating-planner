@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import "./SearchFilter.css";
 
-export const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
+const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
         const [open, setOpen] = useState(false);
         const [query, setQuery] = useState('');        
         const ref = useRef(null);
@@ -17,8 +17,7 @@ export const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
             
         }, []);
 
-        function toggle(e){
-            console.dir([e.target, ref.current])
+        function toggle(e){            
             setOpen(e && e.target === ref.current)
         }
         function filter(guests){
@@ -75,3 +74,4 @@ export const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
         )
    
 }
+export default React.memo(SearchFilter);
