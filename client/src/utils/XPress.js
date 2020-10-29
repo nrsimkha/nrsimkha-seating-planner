@@ -1,5 +1,5 @@
 const XPress = {};
-const baseUrl = 'http://localhost:5000/api';
+const baseUrl = './api';
 
 XPress.getGuests = () => {
   const url = `${baseUrl}/bookings/`;

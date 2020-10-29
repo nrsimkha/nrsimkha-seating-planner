@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import "./SearchFilter.css";
 
-const SearchFilter = ({guests, prompt, value, onChange}) => {
+export const SearchFilterComponent = ({guests, prompt, value, onChange}) => {
         
         const [open, setOpen] = useState(false);
         const [query, setQuery] = useState('');        
@@ -76,4 +76,4 @@ const SearchFilter = ({guests, prompt, value, onChange}) => {
         )
    
 }
-export default React.memo(SearchFilter);
+export const SearchFilter = React.memo(SearchFilterComponent);
