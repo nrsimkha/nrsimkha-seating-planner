@@ -1,8 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react';
-
-
-
-
 import "./SearchFilter.css";
 
 export const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
@@ -26,8 +22,10 @@ export const SearchFilter = ({guests, prompt, value, onChange, onClear}) => {
             setOpen(e && e.target === ref.current)
         }
         function filter(guests){
-            return guests.filter((guest) => 
+            console.log(guests)
+            return guests.filter((guest) =>                
                 guest.name.toLowerCase().indexOf(query.toLowerCase()) > -1
+            
             )
         }
         function displayValue(){

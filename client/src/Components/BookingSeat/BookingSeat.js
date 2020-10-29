@@ -26,7 +26,7 @@ class BookingSeat extends React.Component {
         this.removeSeat(this.props.table, this.props.seat);
     }
     handleNameChange(event){
-        console.log(event);
+       
         this.setState({name: event.target.value});        
 
     }

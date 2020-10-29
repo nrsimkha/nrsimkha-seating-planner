@@ -43,6 +43,7 @@ class App extends React.Component {
     
     try {
       XPress.getGuests().then(guests => {
+        console.log(guests)
         if(guests){
           if (guests.bookings.length) {  
                 
@@ -77,7 +78,7 @@ class App extends React.Component {
     XPress.addGuest(guest).then(guest => {
       let guests = this.state.bookedSeats;
       console.log(guest); 
-      guests.push(guest.guest);    
+      guests.push(guest.guest[0]);    
       this.setState({bookedSeats: guests});
       
     });

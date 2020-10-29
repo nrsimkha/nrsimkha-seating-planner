@@ -33,6 +33,7 @@ XPress.addGuest = guest => {
     body: JSON.stringify({guest})
   };
   return fetch(url, fetchOptions).then(response => {
+    console.log(response)
     if (!response.ok) {
       return new Promise(resolve => resolve(null));
     }
