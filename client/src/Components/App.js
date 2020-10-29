@@ -41,13 +41,22 @@ class App extends React.Component {
 
   componentDidMount() {
     
-    XPress.getGuests().then(guests => {
-      console.log(guests.bookings.length);
-      if (guests.bookings.length) {  
-        console.log(guests.bookings);      
-        this.setState({bookedSeats: guests.bookings});
-      }
-    });   
+    try {
+      XPress.getGuests().then(guests => {
+        if(guests){
+          if (guests.bookings.length) {  
+                
+            this.setState({bookedSeats: guests.bookings});
+          }
+        }
+
+      },
+      err => console.log(err)); 
+    } catch (error) {
+      console.log(error);
+    }
+
+
     window.addEventListener("resize", this.updateWindowDimensions);
   }
 

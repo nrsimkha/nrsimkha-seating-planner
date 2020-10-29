@@ -1,5 +1,3 @@
-import 'whatwg-fetch';
-
 const XPress = {};
 const baseUrl = 'http://localhost:4000/api';
 
